@@ -33,9 +33,4 @@ class desCrypt(object):
 
 
 if __name__ == "__main__":
-    _key = "E.Al0p1O"
-    dc = desCrypt(_key)
-    text = "afd3412"
-    _en_text = dc.des_en(text)
-    print(_en_text)
-    print(dc.des_de(_en_text))
+    pass

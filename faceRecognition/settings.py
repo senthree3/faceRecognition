@@ -50,9 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'faceRecognition.middleWares.responseMiddleware.ResponseMiddleware',  # 数据返回标准化封装
-    # 'faceRecognition.middleWares.accessKeyCheckMiddleware.AccessKeyCheckMiddleware',  # 判定AK是否存在，且是否订购了此项能力
-    # 'faceRecognition.middleWares.signValidationMiddleware.SignValidationMiddleware',  # 用户请求数据校验，判定数据是否被篡改
+    'faceRecognition.middleWares.responseMiddleware.ResponseMiddleware',  # 数据返回标准化封装
+    'faceRecognition.middleWares.accessKeyCheckMiddleware.AccessKeyCheckMiddleware',  # 判定AK是否存在，且是否订购了此项能力
+    'faceRecognition.middleWares.signValidationMiddleware.SignValidationMiddleware',  # 用户请求数据校验，判定数据是否被篡改
     # 请求体以及返回结果数据加解密
 ]
 
@@ -144,6 +144,7 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880  # 5M
 
 #  日志
 LOGGING_DIR = os.path.join(BASE_DIR, "logs")
+os.makedirs(LOGGING_DIR, exist_ok=True)
 LOGGING_NAME = "faceRec"
 LOGGING = {
     'version': 1,  # 使用的python内置的logging模块，那么python可能会对它进行升级，所以需要写一个版本号，目前就是1版本

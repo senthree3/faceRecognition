@@ -37,7 +37,7 @@ class ScrfdDetection(object):
         possibility = []
         for row in bboxes1:
             bboxes.append(np.int32(row[:4]).tolist())
-            possibility.append(round(np.asscalar(row[-1]), 3))
+            possibility.append(round(np.array(row[-1]).item(), 3))
         if bboxes1.shape[0] == 0:
             msg = FaceRecStatusParameter.zero_face.info()
             code = FaceRecStatusParameter.zero_face.code()

@@ -52,19 +52,4 @@ class aesCrypt(object):
 
 
 if __name__ == "__main__":
-    # _tf = ["KEY.RJ", "KEY1.RJ", "KEY2.RJ", "KEY3.RJ"]  # "LICENSE.RJ" KEY.RJ
-    # for t in _tf:
-    #     with open(t, "rb") as f:
-    #         _krj_text = f.read()
-    #         # print(_krj_text)
-    #         _krj_text = base64.decodebytes(_krj_text)  # E7BC96E7A081E69C89E8AFAF 916171790FDA0155469E9CB613E8ED39
-    # _lf = "KEY.RJ" #"LICENSE.RJ"
-    # # _lf = "/home/cv/zhouhs/temp/test.txt"
-    # with open(_lf, "rb") as f1:
-    #     _lf_data = f1.read()
-    # _t = base64.decodebytes(_lf_data) #json.loads(_lf_data)  # ["a"]
-    # # print(_t)
-    # _key = "916171790FDA0155469E9CB613E8ED39" #"fMXKto3xLQOpEL58tYraXpwbEViH7iHH"
-    # print(aesCrypt(key=_key).decrypt(_t, False))
-    # pass
     pass

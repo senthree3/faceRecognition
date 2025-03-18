@@ -7,7 +7,7 @@ import os
 from faceRecognition.settings import BASE_DIR
 from faceRec.core.globalFeatureVectorPool import GlobalFeatureVectorPool
 
-ARCFACE_R50_MODEL_PATH = os.path.join(BASE_DIR, "aiModels/ms1mv2_r50_expand/model.onnx")
+ARCFACE_R50_MODEL_PATH = os.path.join(BASE_DIR, "aiModels/r50_expand/model.onnx")
 
 SAME_PERSON_THRESHOLD = 0.28
 LIKELY_SAME_PERSON_THRESHOLD = 0.2

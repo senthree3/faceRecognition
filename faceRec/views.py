@@ -68,7 +68,7 @@ class O2OImageRecognitionInterface(View):
         logger.info(f"request id:{request_id} one to on image similarity is {conclu}:{sim}")
         tp, des = conclu[0]
         result = {
-            "possibility": round(np.asscalar(sim[0]), 3),
+            "possibility": round(np.array(sim[0]).item(), 3),
             "type": tp,
             "describe": des
         }
@@ -102,7 +102,7 @@ class O2OCheckRecognitionInterface(View):
         logger.info(f"request id:{request_id} one to on image similarity is {conclu}:{sim}")
         tp, des = conclu[0]
         result = {
-            "possibility": round(np.asscalar(sim[0]), 3),
+            "possibility": round(np.array(sim[0]).item(), 3),
             "type": tp,
             "describe": des
         }
@@ -150,7 +150,7 @@ class O2NRecognitionInterface(View):
                     np.array(json.loads(face_info.face_feature_array))]).get_same_person_determine()
                 tp, des = conclu[0]
                 f_o = {
-                    "possibility": round(np.asscalar(sim[0]), 3),
+                    "possibility": round(np.array(sim[0]).item(), 3),
                     "type": tp,
                     "describe": des,
                     "face_id": face_info.face_id,
@@ -183,7 +183,7 @@ class O2NRecognitionInterface(View):
                     "face_id": face_id,
                     "user_name": user_name,
                     "phone": phone,
-                    "possibility": round(np.asscalar(sim), 3)
+                    "possibility": round(np.array(sim).item(), 3)
                 })
                 tp, des = conclu[0]
                 result["type"] = tp
