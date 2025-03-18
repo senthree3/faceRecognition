@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)37&)id8=9xic6)l2)zo1$o_#px2un^d%d3%lb-b8uw533^vy9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -50,9 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'faceRecognition.middleWares.responseMiddleware.ResponseMiddleware',  # 数据返回标准化封装
-    'faceRecognition.middleWares.accessKeyCheckMiddleware.AccessKeyCheckMiddleware',  # 判定AK是否存在，且是否订购了此项能力
-    'faceRecognition.middleWares.signValidationMiddleware.SignValidationMiddleware',  # 用户请求数据校验，判定数据是否被篡改
+    # 'faceRecognition.middleWares.responseMiddleware.ResponseMiddleware',  # 数据返回标准化封装
+    # 'faceRecognition.middleWares.accessKeyCheckMiddleware.AccessKeyCheckMiddleware',  # 判定AK是否存在，且是否订购了此项能力
+    # 'faceRecognition.middleWares.signValidationMiddleware.SignValidationMiddleware',  # 用户请求数据校验，判定数据是否被篡改
     # 请求体以及返回结果数据加解密
 ]
 
