@@ -113,6 +113,8 @@ All API requests require authentication via:
 - `sign`: MD5 signature
 - `data`: AES-encrypted request data
 
+* **`access_key` and `secret_key` obtain from Web Management**
+
 ### API Endpoints
 
 #### Face Library Management
